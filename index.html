@@ -2,15 +2,13 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Contact us ES Sample</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact us Vant-eu</title>
   <link href="css/form.css" rel="stylesheet" type="text/css">
-  <script src="js/validation.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/slim-select@2.8.0/dist/slimselect.min.css" rel="stylesheet" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="js/validation.js"></script>
 </head>
 
 <body class="zf-backgroundBg">
@@ -18,139 +16,140 @@
   <div class="zf-templateWidth">
     <form
       action="https://forms.zohopublic.eu/ookaportal/form/ContactusESSample/formperma/5DwHCBH9IMxTLbEtO7EtWJXk1WEBrUVVIKbvN1mFH9w/htmlRecords/submit"
-      name="form" method="POST" onSubmit='javascript:document.charset="UTF-8"; return zf_ValidateAndSubmit();'
-      accept-charset="UTF-8" enctype="multipart/form-data" id="form">
-      <input type="hidden" name="zf_referrer_name" value="" />
-      <input type="hidden" name="zf_redirect_url" value="" />
-      <input type="hidden" name="zc_gad" value="" />
-
+      name='form' method='POST' onSubmit='javascript:document.charset="UTF-8"; return zf_ValidateAndSubmit();'
+      accept-charset='UTF-8' enctype='multipart/form-data' id='form'>
+      <input type="hidden" name="zf_referrer_name"
+        value="" /><!-- To Track referrals , place the referrer name within the " " in the above hidden input field -->
+      <input type="hidden" name="zf_redirect_url"
+        value="" /><!-- To redirect to a specific page after record submission , place the respective url within the " " in the above hidden input field -->
+      <input type="hidden" name="zc_gad"
+        value="" /><!-- If GCLID is enabled in Zoho CRM Integration, click details of AdWords Ads will be pushed to Zoho CRM -->
       <div class="zf-templateWrapper">
-        <ul class="zf-tempHeadBdr">
-          <li class="zf-tempHeadContBdr">
-            <h2 class="zf-frmTitle"><em>Envíanos un mensaje</em></h2>
-            <p class="zf-frmDesc"></p>
-            <div class="zf-clearBoth"></div>
-          </li>
-        </ul>
-
+        
+         
+        </div>
         <div class="zf-subContWrap zf-topAlign">
           <ul>
-            <!-- Name -->
-            <li class="zf-tempFrmWrapper zf-name zf-namelarge">
-              <label class="zf-labelName" style="display: none">
-                Nombre <em class="zf-important">*</em>
-              </label>
+            <span class="sub-title">Envíanos un mensaje</span>
+            <div class="zf-tempFrmWrapper zf-name zf-namelarge">
               <div class="zf-tempContDiv zf-twoType">
                 <div class="zf-nameWrapper">
-                  <div class="main-f">
-                    <span class="col1">
-                      <label class="zf-labelName">Nombre <em class="zf-important">*</em></label>
-                      <input type="text" maxlength="255" name="Name_First" fieldType="7" placeholder="" />
-                    </span>
-                    <span class="col2">
-                      <label class="zf-labelName">Apellido <em class="zf-important">*</em></label>
-                      <input type="text" maxlength="255" name="Name_Last" fieldType="7" placeholder="" />
-                    </span>
-                  </div>
-                  <div class="zf-clearBoth"></div>
+                  <span>
+                    <label class="zf-labelName">
+                      Nombre
+                      <em class="zf-important"> *</em>
+                    </label>
+                    <input type="text" maxlength="255" name="Name_First" fieldType="7" placeholder="" />
+                    <!-- <label>First Name </label> -->
+                  </span>
+                  <span>
+                    <label class="zf-labelName">Apellido <em class="zf-important"> *</em>
+                    </label>
+                    <input type="text" maxlength="255" name="Name_Last" fieldType="7" placeholder="" />
+                  </span>
                 </div>
-                <p id="Name_error" class="zf-errorMessage" style="display: none">Por favor ingrese el campo requerido
+                <p id="Name_error" class="zf-errorMessage" style="display: none">
+                  Por favor ingrese el campo requerido
                 </p>
               </div>
               <div class="zf-clearBoth"></div>
-            </li>
-
-            <!-- <div class="main-f"> -->
-            <!-- Email -->
-            <li class="zf-tempFrmWrapper zf-large">
-              <label class="zf-labelName">Correo electrónico <em class="zf-important">*</em></label>
-              <div class="zf-tempContDiv">
-                <span>
-                  <input type="text" fieldType="9" maxlength="255" name="Email" checktype="c5" value=""
-                    placeholder="" />
-                </span>
-                <p id="Email_error" class="zf-errorMessage" style="display: none">Por favor ingrese su correo</p>
+            </div>
+            <div class="zfgrid_Wrapper">
+              <!-- email -->
+              <div class="zf-tempFrmWrapper zf-large">
+                <label class="zf-labelName">
+                  Correo electrónico
+                  <em class="zf-important"> *</em>
+                </label>
+                <div class="zf-tempContDiv">
+                  <span>
+                    <input type="text" name="Email" checktype="c5" value="" maxlength="255" fieldType="9"
+                      placeholder="" />
+                  </span>
+                  <p id="Email_error" class="zf-errorMessage" style="display: none">
+                    Por favor ingrese su correo
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
               </div>
-              <div class="zf-clearBoth"></div>
-            </li>
+              <div class="zftwoColumn zfMultiColGrid">
+                <div class="zfCol">
 
-            <!-- Phone -->
-
-            <!-- </div> -->
-
-            <div class="main-f">
-              <!-- Dropdown -->
-
-              <li class="zf-tempFrmWrapper zf-large col1">
-                <label class="zf-labelName">Número de teléfono</label>
-                <div class="zf-tempContDiv zf-phonefld">
-                  <div class="zf-phwrapper zf-phNumber">
-                    <span>
-                      <input type="text" compname="PhoneNumber" name="PhoneNumber_countrycode" maxlength="20"
-                        checktype="c7" value="" phoneFormat="1" isCountryCodeEnabled="false" fieldType="11"
-                        id="international_PhoneNumber_countrycode" valType="number" phoneFormatType="1"
-                        placeholder="" />
-                    </span>
+                  <div class="zf-tempFrmWrapper zf- zf-large">
+                    <label class="zf-labelName"> Número de teléfono </label>
+                    <div class="zf-tempContDiv zf-phonefld">
+                      <div class="zf-phwrapper zf-phNumber">
+                        <span>
+                          <input type="text" compname="PhoneNumber" name="PhoneNumber_countrycode" maxlength="20"
+                            checktype="c7" value="" phoneFormat="1" isCountryCodeEnabled="false" fieldType="11"
+                            id="international_PhoneNumber_countrycode" valType="number" phoneFormatType="1"
+                            placeholder="" />
+                        </span>
+                        <div class="zf-clearBoth"></div>
+                      </div>
+                      <p id="PhoneNumber_error" class="zf-errorMessage" style="display: none">
+                        Invalid value
+                      </p>
+                    </div>
                     <div class="zf-clearBoth"></div>
                   </div>
-                  <p id="PhoneNumber_error" class="zf-errorMessage" style="display: none">Por favor ingrese su número
-                  </p>
                 </div>
-                <div class="zf-clearBoth"></div>
-              </li>
+                <div class="zfCol">
 
-              <li class="zf-tempFrmWrapper zf-large col2">
-                <label class="zf-labelName">Razón para contactar con nosotras <em class="zf-important">*</em></label>
-                <div class="zf-tempContDiv">
-                  <select class="zf-form-sBox" name="Dropdown" checktype="c1">
-                    <option selected value="-Select-" disabled>Seleccione</option>
-                    <option value="Tengo una pregunta sobre el producto.">Tengo una pregunta sobre el producto.</option>
-                    <option value="Tengo problemas con mi dispositivo">Tengo problemas con mi dispositivo</option>
-                    <option value="Quiero compartir comentarios">Quiero compartir comentarios</option>
-                    <option value="Soy minorista o distribuidora">Soy minorista o distribuidora</option>
-                  </select>
-                  <p id="Dropdown_error" class="zf-errorMessage" style="display: none">Por favor seleccione una opción
-                  </p>
+                  <div class="zf-tempFrmWrapper zf-large">
+                    <label class="zf-labelName">
+                      Razón para contactar con nosotras
+                      <em class="zf-important"> *</em>
+                    </label>
+                    <div class="zf-tempContDiv">
+                      <select class="zf-form-sBox" name="Dropdown" checktype="c1" id="reason">
+                        
+                      </select>
+
+                      <p id="Dropdown_error" class="zf-errorMessage" style="display: none">
+                        Por favor seleccione una opción
+                      </p>
+                    </div>
+                    <div class="zf-clearBoth"></div>
+                  </div>
                 </div>
-                <div class="zf-clearBoth"></div>
-              </li>
+              </div>
+              <!-- ////// -->
 
-              <!-- No order number field in Spanish version -->
-              <!-- Skipped on purpose -->
             </div>
-
-            <!-- Subject -->
-            <li class="zf-tempFrmWrapper zf-large">
-              <label class="zf-labelName">Sujeta <em class="zf-important">*</em></label>
+            <div class="zf-tempFrmWrapper zf-large">
+              <label class="zf-labelName">
+                Sujeta
+                <em class="zf-important"> *</em>
+              </label>
               <div class="zf-tempContDiv">
                 <span>
                   <input type="text" name="SingleLine" checktype="c1" value="" maxlength="255" fieldType="1"
                     placeholder="" />
                 </span>
-                <p id="SingleLine_error" class="zf-errorMessage" style="display: none">Por favor ingrese el asunto</p>
+                <p id="SingleLine_error" class="zf-errorMessage" style="display: none">
+                  Por favor ingrese el asunto
+                </p>
               </div>
               <div class="zf-clearBoth"></div>
-            </li>
-
-            <!-- Message -->
-            <li class="zf-tempFrmWrapper zf-large">
-              <label class="zf-labelName">Mensaje
-                <div class="zf-tempContDiv">
-                  <span>
-                    <textarea name="MultiLine" checktype="c1" maxlength="65535" placeholder=""></textarea>
-                  </span>
-                  <p id="MultiLine_error" class="zf-errorMessage" style="display: none">Por favor ingrese su mensaje</p>
-                </div>
-                <div class="zf-clearBoth"></div>
-            </li>
+            </div>
+            <div class="zf-tempFrmWrapper zf-large">
+              <label class="zf-labelName"> Mensaje </label>
+              <div class="zf-tempContDiv">
+                <span>
+                  <textarea name="MultiLine" checktype="c1" maxlength="65535" placeholder=""></textarea>
+                </span>
+                <p id="MultiLine_error" class="zf-errorMessage" style="display: none">
+                  Invalid value
+                </p>
+              </div>
+              <div class="zf-clearBoth"></div>
+            </div>
           </ul>
         </div>
-
-        <!-- Send message -->
-
         <ul>
           <li class="zf-fmFooter">
-            <button class="zf-submitColor" style="text-transform: uppercase;">Enviar</button>
+            <button type="submit" class="zf-submitColor">ENVIAR</button>
           </li>
         </ul>
       </div>
@@ -163,4 +162,74 @@
     var zf_FieldArray = ["Name_First", "Name_Last", "Email", "PhoneNumber_countrycode", "Dropdown", "SingleLine", "MultiLine"];
     var isSalesIQIntegrationEnabled = false;
     var salesIQFieldsArray = [];</script>
+    <script src="https://cdn.jsdelivr.net/npm/slim-select@2.8.0/dist/slimselect.min.js"></script>
+<script>
+  new SlimSelect({
+  select: '#reason',
+  allowHtml: true,
+  data: [
+    {
+      html: `
+        <div class="option-wrapper">
+          Seleccione una opción
+        </div>
+      `,
+      text: 'Seleccione una opción',
+      value: '-Select-',
+      selected: true
+    },
+    {
+      html: `
+        <div class="option-wrapper">
+          Tengo una pregunta sobre el producto
+          <div class="desc">(Dispositivo, cápsulas, cómo funciona, ingredientes o beneficios)</div>
+        </div>
+      `,
+      text: 'Tengo una pregunta sobre el producto',
+      value: 'Tengo una pregunta sobre el producto.'
+    },
+    {
+      html: `
+        <div class="option-wrapper">
+          Tengo problemas con mi dispositivo
+          <div class="desc">(Problemas de carga, uso, reconocimiento del pod o de rendimiento)</div>
+        </div>
+      `,
+      text: 'Tengo problemas con mi dispositivo',
+      value: 'Tengo problemas con mi dispositivo'
+    },
+    {
+      html: `
+        <div class="option-wrapper">
+          Quiero compartir comentarios
+          <div class="desc">(Mi experiencia con Vânt — buena, mala o sugerencias)</div>
+        </div>
+      `,
+      text: 'Quiero compartir comentarios',
+      value: 'Quiero compartir comentarios'
+    },
+    {
+      html: `
+        <div class="option-wrapper">
+          Soy minorista o distribuidora
+          <div class="desc">(Interesado en almacenar o vender Vânt)</div>
+        </div>
+      `,
+      text: 'Soy minorista o distribuidora',
+      value: 'Soy minorista o distribuidora'
+    },
+    {
+      html: `
+        <div class="option-wrapper">
+          Otro
+          <div class="desc">(Cualquier otra cosa no mencionada anteriormente)</div>
+        </div>
+      `,
+      text: 'Otro',
+      value: 'Otro'
+    }
+  ]
+});
+
+</script>
 </body>
