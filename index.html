@@ -55,20 +55,26 @@
               <div class="zf-clearBoth"></div>
             </div>
             <div class="zfgrid_Wrapper">
-              <!-- email -->
-              <div class="zf-tempFrmWrapper zf-large">
-                <label class="zf-labelName">
-                  Correo electrónico
-                  <em class="zf-important"> *</em>
-                </label>
-                <div class="zf-tempContDiv">
-                  <span>
-                    <input type="text" name="Email" checktype="c5" value="" maxlength="255" fieldType="9"
-                      placeholder="" />
-                  </span>
-                  <p id="Email_error" class="zf-errorMessage" style="display: none">
-                    Por favor ingrese su correo
-                  </p>
+              <!-- order number + email in one row -->
+              <div class="zf-tempFrmWrapper zf-name zf-namelarge">
+                <div class="zf-tempContDiv zf-twoType">
+                  <div class="zf-nameWrapper">
+                    <span>
+                      <label class="zf-labelName">Número de orden</label>
+                      <input type="text" name="SingleLine2" checktype="c1" value="" maxlength="255"
+                                        fieldType=1 placeholder="" /> </span>
+                                <p id="SingleLine2_error" class="zf-errorMessage" style="display: none;">Invalid value
+                                </p>
+                    </span>
+                    <span style="position: relative;">
+                      <label class="zf-labelName">
+                        Correo electrónico
+                        <em class="zf-important"> *</em>
+                      </label>
+                      <input type="text" name="Email" checktype="c5" value="" maxlength="255" fieldType="9" placeholder="" />
+                      <p id="Email_error" class="zf-errorMessage" style="display: none">Por favor ingrese su correo</p>
+                    </span>
+                  </div>
                 </div>
                 <div class="zf-clearBoth"></div>
               </div>
@@ -159,7 +165,7 @@
     var zf_DateRegex = new RegExp(dateAndMonthRegexFormateArray[0]);
     var zf_MonthYearRegex = new RegExp(dateAndMonthRegexFormateArray[1]);
     var zf_MandArray = ["Name_First", "Name_Last", "Email", "Dropdown", "SingleLine"];
-    var zf_FieldArray = ["Name_First", "Name_Last", "Email", "PhoneNumber_countrycode", "Dropdown", "SingleLine", "MultiLine"];
+    var zf_FieldArray = ["Name_First", "Name_Last", "Email", "PhoneNumber_countrycode", "Dropdown", "SingleLine", "SingleLine2", "MultiLine"];
     var isSalesIQIntegrationEnabled = false;
     var salesIQFieldsArray = [];</script>
     <script src="https://cdn.jsdelivr.net/npm/slim-select@2.8.0/dist/slimselect.min.js"></script>
