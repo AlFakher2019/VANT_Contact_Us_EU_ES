@@ -238,4 +238,35 @@
 });
 
 </script>
+<script>
+  function updateHeight() {
+      requestAnimationFrame(() => {
+          let formContainer = document.querySelector("#form");
+          if (formContainer) {
+              formContainer.style.display = "block"; 
+              void formContainer.offsetHeight; 
+
+              let newHeight = formContainer.scrollHeight + 20;
+              window.parent.postMessage(newHeight, '*');
+              setTimeout(() => {
+                  document.body.style.overflow = "";
+              }, 300);
+          }
+      });
+  }
+  document.addEventListener("DOMContentLoaded", function () {
+      setTimeout(updateHeight, 100);
+  });
+  document.addEventListener("click", function(event) {
+      if (event.target.matches(".next, .previous, .same")) {
+          setTimeout(updateHeight, 50);
+      }
+  });
+  window.addEventListener("resize", updateHeight);
+  const observer = new MutationObserver(() => {
+      updateHeight();
+  });
+
+  observer.observe(document.querySelector("#form"), { childList: true, subtree: true });
+</script>  
 </body>
